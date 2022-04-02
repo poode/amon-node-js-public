@@ -2,6 +2,7 @@ const path = require('path');
 const chaiAsPromised = require('chai-as-promised');
 const logger = require('../src/modules/logger');
 const chaiDateString = require('chai-date-string');
+const spies = require('chai-spies');
 
 logger.transports[0].level = 'silly';
 
@@ -11,6 +12,7 @@ global.chai = require('chai');
 global.expect = global.chai.expect;
 global.chai.use(chaiAsPromised);
 global.chai.use(chaiDateString);
+global.chai.use(spies);
 
 process.on('unhandledRejection', (reason, p) => {
   console.error('Unhandled Rejection at: Promise', p, 'reason:', reason);

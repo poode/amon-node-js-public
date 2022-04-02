@@ -6,6 +6,7 @@ node_modules
 .env.local
 /data/
 sand/
+.nyc_output
 
 coverage
 sandbox

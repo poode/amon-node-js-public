@@ -25,7 +25,8 @@
     "db:migrate:create": "sequelize migration:create --migrations-path src/models/pg/migrations/  --name",
     "wait:migrate": "test/scripts/waitDown.sh migrate",
     "wait:db": "test/scripts/waitUp.sh db 5432",
-    "wait:api": "test/scripts/waitUp.sh service-api 3000"
+    "wait:api": "test/scripts/waitUp.sh service-api 3000",
+    "service:api:dev": "nodemon runners/api"
   },
   "engines": {
     "node": "16.x",
@@ -56,7 +57,9 @@
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
     "chai-date-string": "^0.1.0",
+    "chai-spies": "^1.0.0",
     "codecov": "^3.8.3",
+    "coingecko-api": "^1.0.10",
     "decimal.js": "^10.3.1",
     "dot-only-hunter": "^1.0.3",
     "dotenv": "^10.0.0",
@@ -103,6 +106,7 @@
     "ws": "^8.2.3"
   },
   "devDependencies": {
+    "nodemon": "^2.0.15",
     "sequelize-cli": "^6.3.0"
   }
 }
